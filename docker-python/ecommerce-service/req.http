@@ -1,0 +1,115 @@
+### Saludo.
+GET http://localhost:8000/greeting
+
+
+# =================================================================
+#                           Users
+# =================================================================
+
+### Crear usuario.
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "name": "kenny",
+    "email": "k@cd.com",
+    "password": "kl",
+    "is_admin": 1
+
+}
+
+### Actualizar .
+PUT http://localhost:8000/users/1
+Content-Type: application/json
+
+{
+    "name": "kenny luque",
+    "email": "kl@cd.com",
+    "password": "klt",
+    "is_admin": 1
+}
+
+
+### Obtener todos los usuarios
+GET http://localhost:8000/users
+
+### Borrar .
+DELETE http://localhost:8000/users/1
+
+
+# =================================================================
+#                           Products
+# =================================================================
+
+### Crear productos.
+POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+    "name": "laptop",
+    "description": "HPLaptopXPS",
+    "quantity": 5,
+    "seller_user": 1,
+    "category": 9
+
+}
+
+
+### Actualizar .
+PUT http://localhost:8000/products/1
+Content-Type: application/json
+
+{
+    "name": "laptop",
+    "description": "HPLaptopXPS",
+    "quantity": 5,
+    "seller_user": 2,
+    "category": 3
+
+}
+
+
+### Obtener todos los productos
+GET http://localhost:8000/products
+
+### Obtener tusuario
+GET http://localhost:8000/products/1
+
+### Borrar .
+DELETE http://localhost:8000/products/1
+
+# =================================================================
+#                           Categories
+# =================================================================
+
+### Crear productos.
+POST http://localhost:8000/categories
+Content-Type: application/json
+
+{
+    "name": "electro",
+    "description": "computo"
+
+}
+
+### Actualizar .
+PUT http://localhost:8000/categories/3
+Content-Type: application/json
+
+{
+    "name": "regalos",
+    "description": "regalos sorpresa"
+
+}
+
+
+### Obtener todos los categorias
+GET http://localhost:8000/categories
+
+### Obtener categorias
+GET http://localhost:8000/categories/1
+
+### Borrar .
+DELETE http://localhost:8000/categories/1
+
+
